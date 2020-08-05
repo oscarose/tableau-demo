@@ -55,7 +55,7 @@ else
     log initialize server done
 
     log initialuser
-    su tsm -c "sudo /opt/tableau/tableau_server/packages/bin.${TABLEAU_SERVER_DATA_DIR_VERSION}/tabcmd initialuser --server localhost:80 --username admin --password admin" 2>&1 1>> /var/log/tableau_docker.log
+    su tsm -c "sudo /opt/tableau/tableau_server/packages/bin.${TABLEAU_SERVER_DATA_DIR_VERSION}/tabcmd initialuser --server localhost:8850 --username admin --password admin" 2>&1 1>> /var/log/tableau_docker.log
     log all done
 
     touch /opt/tableau/docker_build/.init-done
